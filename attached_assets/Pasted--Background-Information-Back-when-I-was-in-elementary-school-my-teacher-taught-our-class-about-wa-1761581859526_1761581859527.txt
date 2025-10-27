@@ -1,0 +1,40 @@
+🔖 Background Information
+Back when I was in elementary school, my teacher taught our class about warm fuzzies and cold pricklies. Warm fuzzies are kind actions and words that uplift people, whereas cold pricklies are mean actions and words that make people feel bad. Warm fuzzies come in a variety of forms (i.e. helping clean the classroom, giving a compliment, finishing your homework), which will be represented in this lab using different colors.
+
+🎯 Problem Statement
+Given a list of colorful rainbow fuzzies, find the index of the golden fuzzy in the list.
+
+✅ Acceptance Criteria
+I have provided two functions that generate a sorted ArrayList of fuzzies and a random ArrayList of fuzzies:
+
+FuzzyListGenerator#sortedRainbowFuzzies
+FuzzyListGenerator#randomizedRainbowFuzzies
+Your job is to implement a linear search function and a binary search function that will return the index of the golden fuzzy in a list of fuzzies (i.e. the fuzzy with a color of “gold”).
+
+You should test each of your functions with each list and report the results (i.e. four tests total).
+
+I know what you are thinking - binary search won’t work on a random list! You are correct. I still want you to try running binary search on the randomized list and report what happens in the Thought-Provoking Questions. Make sure you test your functions using JUnit before you report your final results!
+
+📋 Dev Notes
+The Fuzzy class defines a simple warm fuzzy object. The color of a fuzzy is publicly accessible and can be used to search for specific fuzzies. Don’t directly alter this class.
+The FuzzyListGenerator class defines a generator which will create a list of 7000 rainbow fuzzies along with one extra golden fuzzy when given no arguments in the constructor. Do not directly alter this class.
+You can specify the number of iterations the generator goes through when creating a list of fuzzies by adding an arguments to the the constructor.
+The golden fuzzy has a color of “gold”.
+🖥️ Example Output
+Your functions might be utilized in a main method as follows:
+
+
+public static void main(String args[]) {
+  FuzzyListGenerator generator = new FuzzyListGenerator();
+  FuzzyFinder finder = new FuzzyFinder();
+ 
+  ArrayList<Fuzzy> sortedFuzzies = generator.sortedRainbowFuzzies();
+  ArrayList<Fuzzy> randomFuzzies = generator.randomizedRainbowFuzzies();
+ 
+  int testOne = finder.linearSearch(sortedFuzzies);
+  int testTwo = finder.binarySearch(sortedFuzzies);
+  int testThree = finder.linearSearch(randomFuzzies);
+  int testFour = finder.binarySearch(randomFuzzies);
+}
+
+this is in Java can you code this project?
